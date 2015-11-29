@@ -80,7 +80,7 @@ public class GelinkteLijstTest {
         lijst.insertFirst(2);
         lijst.insertFirst(3);
         lijst.remove(2);
-        assertEquals(2, lijst.getSize());
+        assertEquals(3, lijst.getSize());
     }
 
 

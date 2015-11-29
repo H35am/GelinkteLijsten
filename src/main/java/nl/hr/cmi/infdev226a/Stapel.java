@@ -22,25 +22,35 @@ public class Stapel {
 	 * Zet een object boven op de stapel
 	 * @param object
 	 */
-    public void push(Object object){}
+    public void push(Object object){
+		lijst.insertFirst(object);
+	}
 	
 	/**
 	 * Haalt het bovenste object van de stapel
 	 * LIFO: Last-in, First-out
 	 * @return het bovenste object
 	 */
-    public Object pop(){return new Object();}
+    public Object pop(){
+		Object o = lijst.getFirst();
+		lijst.remove(o);
+		return o;
+	}
 	
 	/**
 	 * Geeft het bovenste object terug, maar 
 	 * laat het op de stapel staan.
 	 * @return
 	 */
-    public Object front(){return new Object();}
+    public Object front(){
+		return lijst.getFirst();
+	}
 
 	/**
 	 * Geeft 'true' als er niks op de stapel ligt.
 	 * @return
 	 */
-    public boolean isEmpty(){return false;}
+    public boolean isEmpty(){
+		return lijst.getSize() == 0;
+	}
 }
